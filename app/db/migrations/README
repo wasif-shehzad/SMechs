@@ -1,0 +1,5 @@
+This directory contains Alembic migration scripts for managing database schema changes.
+
+- Use `alembic revision --autogenerate -m "message"` to create a new migration.
+- Use `alembic upgrade head` to apply migrations.
+- See alembic.ini for configuration. 
