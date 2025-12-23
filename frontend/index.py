@@ -26,7 +26,7 @@ with st.sidebar:
                 files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
                 # Updated to match your 'add' endpoint from previous steps
                 response = requests.post(f"{FASTAPI_URL}/api/v1/documents/?category={category}", files=files)
-                if response.status_code == 200:
+                if response.status_code == 201:
                     st.success("Document indexed in Pinecone!")
                 else:
                     st.error(f"Upload failed: {response.text}")
